@@ -11,4 +11,6 @@ import java.util.UUID;
 public interface BeerInventoryRepository extends JpaRepository<BeerInventory, UUID> {
 
     List<BeerInventory> findAllByBeerId(UUID beerId);
+    
+    List<BeerInventory> findAllByUpc(String upc);
 }
