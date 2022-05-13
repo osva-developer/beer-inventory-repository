@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 @Component
-public class AllocationListener {
+public class AllocationListener {//method who update and delete register in the inventory 
     private final AllocationService allocationService;
     private final JmsTemplate jmsTemplate;
 

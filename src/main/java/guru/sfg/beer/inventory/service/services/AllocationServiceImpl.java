@@ -50,7 +50,7 @@ public class AllocationServiceImpl implements AllocationService {
             int allocatedQty = (beerOrderLine.getQuantityAllocated() == null) ? 0 : beerOrderLine.getQuantityAllocated();
             int qtyToAllocate = orderQty - allocatedQty;
 
-            if (inventory >= qtyToAllocate) { // full allocation
+            if (inventory >= qtyToAllocate) { // full allocation //update data inventory  10,3
                 inventory = inventory - qtyToAllocate;
                 beerOrderLine.setQuantityAllocated(orderQty);
                 beerInventory.setQuantityOnHand(inventory);

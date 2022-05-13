@@ -10,6 +10,10 @@ import guru.sfg.brewery.model.events.NewInventoryEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+
+/*
+ * It class create new beer, creating a new register with a defined amount
+ */
 @Slf4j
 @RequiredArgsConstructor
 @Component
