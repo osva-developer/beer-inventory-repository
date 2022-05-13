@@ -1,20 +1,19 @@
 package guru.sfg.beer.inventory.service.services;
 
-import org.springframework.jms.annotation.JmsListener;
-import org.springframework.jms.core.JmsTemplate;
-import org.springframework.stereotype.Component;
-
 import guru.sfg.beer.inventory.service.config.JmsConfig;
 import guru.sfg.brewery.model.events.AllocateOrderRequest;
 import guru.sfg.brewery.model.events.AllocateOrderResult;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.stereotype.Component;
 
 
 @Slf4j
 @RequiredArgsConstructor
 @Component
-public class AllocationListener {//method who update and delete register in the inventory 
+public class AllocationListener {
     private final AllocationService allocationService;
     private final JmsTemplate jmsTemplate;
 

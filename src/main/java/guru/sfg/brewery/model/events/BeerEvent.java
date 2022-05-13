@@ -1,20 +1,22 @@
 package guru.sfg.brewery.model.events;
 
-import java.io.Serializable;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
+/**
+ * Created by jt on 2019-07-21.
+ */
 @Data
 @AllArgsConstructor
 @Builder
 @NoArgsConstructor
 public class BeerEvent implements Serializable {
 
+    static final long serialVersionUID = -5781515597148163111L;
 
-
-	private static final long serialVersionUID = 8829118592572365856L;
-	private BeerDto beerDto;
+    private BeerDto beerDto;
 }

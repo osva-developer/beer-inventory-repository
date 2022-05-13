@@ -1,16 +1,15 @@
 package guru.sfg.beer.inventory.service.services;
 
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import org.springframework.stereotype.Service;
-
 import guru.sfg.beer.inventory.service.domain.BeerInventory;
 import guru.sfg.beer.inventory.service.repositories.BeerInventoryRepository;
 import guru.sfg.brewery.model.BeerOrderDto;
 import guru.sfg.brewery.model.BeerOrderLineDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 @Slf4j
@@ -50,7 +49,7 @@ public class AllocationServiceImpl implements AllocationService {
             int allocatedQty = (beerOrderLine.getQuantityAllocated() == null) ? 0 : beerOrderLine.getQuantityAllocated();
             int qtyToAllocate = orderQty - allocatedQty;
 
-            if (inventory >= qtyToAllocate) { // full allocation //update data inventory  10,3
+            if (inventory >= qtyToAllocate) { // full allocation
                 inventory = inventory - qtyToAllocate;
                 beerOrderLine.setQuantityAllocated(orderQty);
                 beerInventory.setQuantityOnHand(inventory);
